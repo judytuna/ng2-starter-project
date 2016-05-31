@@ -30,11 +30,11 @@ The unit and E2E testing configs are both in the top level `config` directory. U
 
 ```bash
 # Run unit tests
-ng test # or npm test if you have already run "ng build"
+ng test # or npm test if you have already built the app
 
 # Run E2E tests
 # in one window
-ng server
+ng server # or npm start
 
 #in another window
 ng e2e # or npm run pree2e && npm run e2e
