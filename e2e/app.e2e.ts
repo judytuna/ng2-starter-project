@@ -7,8 +7,13 @@ describe('ng2-starter-project App', function() {
     page = new Ng2StarterProjectPage();
   })
 
-  it('should display message saying app works', () => {
+  it('should have 3 links in the nav', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('ng2-starter-project works!');
+    expect(page.getNavLinks().count()).toEqual(3);
+  });
+
+  it('should have a <router-outlet/> directive', () => {
+    page.navigateTo();
+    expect(page.getRouterOutlet().isPresent()).toBeTruthy();
   });
 });

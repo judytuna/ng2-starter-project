@@ -3,7 +3,11 @@ export class Ng2StarterProjectPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.css('ng2-starter-project-app h1')).getText();
+  getNavLinks() {
+    return element.all(by.css('ng2-starter-project-app nav a'));
+  }
+
+  getRouterOutlet() {
+    return element(by.css('router-outlet'));
   }
 }

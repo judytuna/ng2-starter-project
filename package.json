@@ -5,11 +5,13 @@
   "angular-cli": {},
   "scripts": {
     "start": "ng server",
+    "build": "ng build",
     "postinstall": "typings install",
     "lint": "tslint \"src/**/*.ts\"",
     "format": "clang-format -i -style=file --glob=src/**/*.ts",
     "pree2e": "webdriver-manager update",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "test": "karma start config/karma.conf.js"
   },
   "private": true,
   "dependencies": {

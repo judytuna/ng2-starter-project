@@ -10,11 +10,13 @@ import { ComponentFixture, TestComponentBuilder } from '@angular/compiler/testin
 import { Component } from '@angular/core';
 import { By } from '@angular/platform-browser';
 import { ItemsComponent } from './items.component';
+import { MessageService } from '../shared';
+import { ItemsService } from './shared';
 
 describe('Component: Items', () => {
   let builder: TestComponentBuilder;
 
-  beforeEachProviders(() => [ItemsComponent]);
+  beforeEachProviders(() => [ItemsService, MessageService, ItemsComponent]);
   beforeEach(inject([TestComponentBuilder], function (tcb: TestComponentBuilder) {
     builder = tcb;
   }));
@@ -43,4 +45,3 @@ describe('Component: Items', () => {
 })
 class ItemsComponentTestController {
 }
-
