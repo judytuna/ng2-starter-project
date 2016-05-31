@@ -21,5 +21,5 @@ import {MessageService} from './shared';
 export class Ng2StarterProjectAppComponent {
   title = 'ng2-starter-project works!';
 
-  constructor(private _router:Router){}
+  constructor(private _router: Router) {}
 }

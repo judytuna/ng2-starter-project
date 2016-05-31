@@ -10,13 +10,8 @@ import {
   Router,
   RouterOutletMap,
   RouteSegment,
-  Route,
-  ROUTER_DIRECTIVES,
-  Routes,
   RouterUrlSerializer,
-  DefaultRouterUrlSerializer,
-  OnActivate,
-  CanDeactivate
+  DefaultRouterUrlSerializer
 } from '@angular/router';
 
 import {SpyLocation} from '@angular/common/testing';
@@ -30,7 +25,9 @@ beforeEachProviders(() => [
   provide(Location, {useClass: SpyLocation}),
   provide(RouteSegment, {useFactory: (r) => r.routeTree.root, deps: [Router]}),
   provide(Router, {
-    useFactory: (resolver, urlParser, outletMap, location) => new Router("Ng2StarterProjectAppComponent", Ng2StarterProjectAppComponent, resolver, urlParser, outletMap, location),
+    useFactory: (resolver, urlParser, outletMap, location) =>
+      new Router('Ng2StarterProjectAppComponent',
+        Ng2StarterProjectAppComponent, resolver, urlParser, outletMap, location),
     deps: [ComponentResolver, RouterUrlSerializer, RouterOutletMap, Location]
   }),
   Ng2StarterProjectAppComponent
