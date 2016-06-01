@@ -12,14 +12,14 @@ export class AboutComponent implements OnInit {
   body: string = 'This is the about page body';
   message: string;
 
-  constructor(public _stateService: MessageService) {
+  constructor(public stateService: MessageService) {
   }
 
   ngOnInit() {
-    this.message = this._stateService.getMessage();
+    this.message = this.stateService.getMessage();
   }
 
   updateMessage(m: string): void {
-    this._stateService.setMessage(m);
+    this.stateService.setMessage(m);
   }
 }

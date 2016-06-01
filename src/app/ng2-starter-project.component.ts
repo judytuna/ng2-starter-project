@@ -19,5 +19,5 @@ import {MessageService} from './shared';
   {path: '/items', component: ItemsComponent}
 ])
 export class Ng2StarterProjectAppComponent {
-  constructor(private _router: Router) {}
+  constructor(private router: Router) {}
 }

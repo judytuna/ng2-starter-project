@@ -18,15 +18,15 @@ export class ItemsComponent implements OnInit {
   items: Item[];
 
   constructor(
-    private _stateService: MessageService,
-    private _itemsService: ItemsService) {}
+    private stateService: MessageService,
+    private itemsService: ItemsService) {}
 
   ngOnInit() {
-    this.items = this._itemsService.getItems();
-    this.message = this._stateService.getMessage();
+    this.items = this.itemsService.getItems();
+    this.message = this.stateService.getMessage();
   }
 
   updateMessage(m: string): void {
-    this._stateService.setMessage(m);
+    this.stateService.setMessage(m);
   }
 }

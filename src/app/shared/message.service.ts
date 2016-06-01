@@ -2,13 +2,13 @@ import {Injectable} from '@angular/core';
 
 @Injectable()
 export class MessageService {
-  private _message = 'Hello Message';
+  private message = 'Hello Message';
 
   getMessage(): string {
-    return this._message;
+    return this.message;
   };
 
   setMessage(newMessage: string): void {
-    this._message = newMessage;
+    this.message = newMessage;
   };
 }
