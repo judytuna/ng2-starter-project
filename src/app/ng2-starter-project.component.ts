@@ -14,9 +14,11 @@ import {MessageService} from './shared';
   providers: [MessageService]
 })
 @Routes([
+  {path: '/', component: HomeComponent },
   {path: '/home', component: HomeComponent},
   {path: '/about', component: AboutComponent},
-  {path: '/items', component: ItemsComponent}
+  {path: '/items', component: ItemsComponent},
+  {path: '/*', component: HomeComponent }
 ])
 export class Ng2StarterProjectAppComponent {
   constructor(private router: Router) {}
