@@ -22,6 +22,6 @@ import { WidgetsComponent } from './+widgets';
   {path: '/widgets', component: WidgetsComponent},
   {path: '/*', component: HomeComponent }
 ])
-export class Ng2StarterProjectAppComponent {
+export class AppComponent {
   constructor(private router: Router) {}
 }
