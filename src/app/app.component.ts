@@ -5,7 +5,7 @@ import { AboutComponent } from './+about';
 import { ItemsComponent } from './+items';
 import { MessageService } from './shared';
 import { WidgetComponent } from './+widget';
-import { GadgetsComponent } from './+gadgets';
+import { GadgetsComponent } from './gadgets';
 
 @Component({
   moduleId: module.id,
