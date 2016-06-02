@@ -5,13 +5,14 @@ import { AboutComponent } from './+about';
 import { ItemsComponent } from './+items';
 import {MessageService} from './shared';
 import { WidgetsComponent } from './+widgets';
+import { GadgetsComponent } from './gadgets';
 
 @Component({
   moduleId: module.id,
   selector: 'app',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css'],
-  directives: [ROUTER_DIRECTIVES],
+  directives: [ROUTER_DIRECTIVES, GadgetsComponent],
   providers: [MessageService]
 })
 @Routes([
