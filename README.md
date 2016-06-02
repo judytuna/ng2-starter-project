@@ -17,7 +17,7 @@ cd ng2-starter-project
 npm i
 
 # Run the app
-ng server # or npm start
+ng serve # or npm start
 
 # Build the app
 ng build # or npm run build
