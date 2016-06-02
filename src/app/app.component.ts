@@ -7,9 +7,9 @@ import {MessageService} from './shared';
 
 @Component({
   moduleId: module.id,
-  selector: 'ng2-starter-project-app',
-  templateUrl: 'ng2-starter-project.component.html',
-  styleUrls: ['ng2-starter-project.component.css'],
+  selector: 'app',
+  templateUrl: 'app.component.html',
+  styleUrls: ['app.component.css'],
   directives: [ROUTER_DIRECTIVES],
   providers: [MessageService]
 })

@@ -17,7 +17,7 @@ import {
 import {SpyLocation} from '@angular/common/testing';
 import {Location} from '@angular/common';
 import {provide, ComponentResolver} from '@angular/core';
-import {Ng2StarterProjectAppComponent} from '../app/ng2-starter-project.component';
+import {Ng2StarterProjectAppComponent} from '../app/app.component';
 
 beforeEachProviders(() => [
   provide(RouterUrlSerializer, {useClass: DefaultRouterUrlSerializer}),

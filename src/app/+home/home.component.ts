@@ -12,13 +12,13 @@ export class HomeComponent implements OnInit {
   body:  string = 'This is the about home body';
   message: string;
 
-  constructor(private stateService: MessageService) { }
+  constructor(private messageService: MessageService) { }
 
   ngOnInit() {
-    this.message = this.stateService.getMessage();
+    this.message = this.messageService.getMessage();
   }
 
   updateMessage(m: string): void {
-    this.stateService.setMessage(m);
+    this.messageService.setMessage(m);
   }
 }
