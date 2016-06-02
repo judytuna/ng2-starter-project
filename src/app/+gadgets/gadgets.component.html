@@ -1,7 +1,16 @@
-<div>I'm a list of gadgets!</div>
+<div>{{ title }}</div>
 
+<div>{{ body }}</div>
 <ul>
   <li>Red gadget</li>
   <li>Blue gadget</li>
   <li>Green gadget</li>
 </ul>
+
+<div [style.color]="color"
+     (mouseover)="changeColor()">
+  I am some color-changing text! Wahooo
+</div>
+
+<textarea [(ngModel)]="text" #textBox>{{ text }}</textarea>
+<p *ngIf="textBox?.value">Here's the text: {{ textBox.value }}</p>
