@@ -4,6 +4,7 @@ import { Routes, Router, ROUTER_DIRECTIVES} from '@angular/router';
 import { AboutComponent } from './+about';
 import { ItemsComponent } from './+items';
 import {MessageService} from './shared';
+import { WidgetsComponent } from './+widgets';
 
 @Component({
   moduleId: module.id,
@@ -18,6 +19,7 @@ import {MessageService} from './shared';
   {path: '/home', component: HomeComponent},
   {path: '/about', component: AboutComponent},
   {path: '/items', component: ItemsComponent},
+  {path: '/widgets', component: WidgetsComponent},
   {path: '/*', component: HomeComponent }
 ])
 export class Ng2StarterProjectAppComponent {

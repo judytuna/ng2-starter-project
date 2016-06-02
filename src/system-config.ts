@@ -7,7 +7,8 @@ const map: any = {
 
 /** User packages configuration. */
 const packages: any = {
-  'app/+items/shared': {main: 'index'}
+  'app/+items/shared': {main: 'index'},
+  'app/+widgets/shared': {main: 'index'}
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -34,6 +35,7 @@ const barrels: string[] = [
   'app/+about',
   'app/+items',
   'app/+items/item-details',
+  'app/+widgets',
   /** @cli-barrel */
 ];
 
