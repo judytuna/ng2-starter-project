@@ -10,11 +10,12 @@ import { ComponentFixture, TestComponentBuilder } from '@angular/compiler/testin
 import { Component } from '@angular/core';
 import { By } from '@angular/platform-browser';
 import { WidgetsComponent } from './widgets.component';
+import { WidgetsService } from './shared';
 
 describe('Component: Widgets', () => {
   let builder: TestComponentBuilder;
 
-  beforeEachProviders(() => [WidgetsComponent]);
+  beforeEachProviders(() => [WidgetsComponent, WidgetsService]);
   beforeEach(inject([TestComponentBuilder], function (tcb: TestComponentBuilder) {
     builder = tcb;
   }));
@@ -43,4 +44,3 @@ describe('Component: Widgets', () => {
 })
 class WidgetsComponentTestController {
 }
-
