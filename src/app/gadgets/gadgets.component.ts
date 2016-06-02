@@ -7,15 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['gadgets.component.css']
 })
 export class GadgetsComponent implements OnInit {
-  greeting: string = 'Welcome to the gadgets component!';
+  title: string = 'Gadgets';
+  favoriteGadget: string = 'iPad Mini';
+  asyncData: {gadget: string};
+  shouldShowFavorite: boolean = false;
   constructor() {}
 
   ngOnInit() {
-    this.greet();
   }
 
-  greet() {
-    alert(this.greeting);
+  getAsyncData() {
+    this.asyncData = null;
+    setTimeout(() => {
+      this.asyncData = {gadget: this.favoriteGadget};
+    }, 1000);
   }
 
+  toggleFavorite() {
+    this.shouldShowFavorite = !this.shouldShowFavorite;
+  }
 }

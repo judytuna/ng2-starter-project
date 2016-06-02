@@ -1,3 +1,19 @@
-<p>
-  gadgets works!
-</p>
+<div class="content-card mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">{{ title }}</h2>
+    <button (click)="toggleFavorite()" class="mdl-button mdl-js-button mdl-button--raised">
+      Show Favorite
+    </button>
+  </div>
+  <div class="mdl-card__supporting-text">
+    <div *ngIf="shouldShowFavorite">
+      <h5 [style.color]="'#DC3D3D'">Favorite gadget: <strong>{{input.value}}</strong></h5>
+      <input #input class="mdl-textfield__input" [(ngModel)]="favoriteGadget" placeholder="Favorite gadget" type="text">
+    </div>
+
+    <h5>Async data: {{asyncData?.gadget}}</h5>
+    <button (click)="getAsyncData()" class="mdl-button mdl-js-button mdl-button--raised">
+      Get Async Data
+    </button>
+  </div>
+</div>
