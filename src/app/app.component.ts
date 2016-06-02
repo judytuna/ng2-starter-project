@@ -20,6 +20,6 @@ import {MessageService} from './shared';
   {path: '/items', component: ItemsComponent},
   {path: '/*', component: HomeComponent }
 ])
-export class Ng2StarterProjectAppComponent {
+export class AppComponent {
   constructor(private router: Router) {}
 }
