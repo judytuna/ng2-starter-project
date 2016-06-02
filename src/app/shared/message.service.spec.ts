@@ -14,4 +14,9 @@ describe('Message Service', () => {
       inject([MessageService], (service: MessageService) => {
     expect(service).toBeTruthy();
   }));
+
+  it('should ask about unicorns',
+    inject([MessageService], (service: MessageService) => {
+      expect(service).toBeTruthy();
+    }));
 });

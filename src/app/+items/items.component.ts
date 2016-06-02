@@ -16,6 +16,7 @@ export class ItemsComponent implements OnInit {
   body: string = 'This is the about items body';
   message: string;
   items: Item[];
+  unicorn: string;
 
   constructor(
     private messageService: MessageService,
@@ -24,6 +25,7 @@ export class ItemsComponent implements OnInit {
   ngOnInit() {
     this.items = this.itemsService.getItems();
     this.message = this.messageService.getMessage();
+    this.unicorn = this.messageService.unicorn;
   }
 
   updateMessage(m: string): void {

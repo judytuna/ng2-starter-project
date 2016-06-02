@@ -14,4 +14,9 @@ describe('Items Service', () => {
       inject([ItemsService], (service: ItemsService) => {
     expect(service).toBeTruthy();
   }));
+
+  it('should have a list of items with five things',
+      inject([ItemsService], (service: ItemsService) => {
+    expect(service.getItems().length).toEqual(5);
+  }));
 });
