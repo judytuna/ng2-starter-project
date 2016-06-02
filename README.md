@@ -34,7 +34,7 @@ ng test # or npm test if you have already built the app
 
 # Run E2E tests
 # in one window
-ng server # or npm start
+ng serve # or npm start
 
 #in another window
 ng e2e # or npm run pree2e && npm run e2e
