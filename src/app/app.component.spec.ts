@@ -17,7 +17,7 @@ import {
 import {SpyLocation} from '@angular/common/testing';
 import {Location} from '@angular/common';
 import {provide, ComponentResolver} from '@angular/core';
-import {Ng2StarterProjectAppComponent} from '../app/app.component';
+import {AppComponent} from '../app/app.component';
 
 beforeEachProviders(() => [
   provide(RouterUrlSerializer, {useClass: DefaultRouterUrlSerializer}),
@@ -26,16 +26,16 @@ beforeEachProviders(() => [
   provide(RouteSegment, {useFactory: (r) => r.routeTree.root, deps: [Router]}),
   provide(Router, {
     useFactory: (resolver, urlParser, outletMap, location) =>
-      new Router('Ng2StarterProjectAppComponent',
-        Ng2StarterProjectAppComponent, resolver, urlParser, outletMap, location),
+      new Router('AppComponent',
+        AppComponent, resolver, urlParser, outletMap, location),
     deps: [ComponentResolver, RouterUrlSerializer, RouterOutletMap, Location]
   }),
-  Ng2StarterProjectAppComponent
+  AppComponent
 ]);
 
-describe('App: Ng2StarterProject', () => {
+describe('App', () => {
   it('should create the app',
-      inject([Ng2StarterProjectAppComponent], (app: Ng2StarterProjectAppComponent) => {
+      inject([AppComponent], (app: AppComponent) => {
     expect(app).toBeTruthy();
   }));
 });
