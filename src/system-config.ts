@@ -8,7 +8,8 @@ const map: any = {
 /** User packages configuration. */
 const packages: any = {
   'app/+items/shared': {main: 'index'},
-  'app/+widgets/shared': {main: 'index'}
+  'app/+widgets/shared': {main: 'index'},
+  'app/gadgets/shared': {main: 'index'}
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////

@@ -8,7 +8,7 @@
   <div class="mdl-card__supporting-text">
     <div *ngIf="shouldShowFavorite">
       <h5 [style.color]="'#DC3D3D'">Favorite gadget: <strong>{{input.value}}</strong></h5>
-      <input #input class="mdl-textfield__input" [(ngModel)]="favoriteGadget" placeholder="Favorite gadget" type="text">
+      <input (blur)="setFavorite()" #input class="mdl-textfield__input" [(ngModel)]="favoriteGadget" placeholder="Favorite gadget" type="text">
     </div>
 
     <h5>Async data: {{asyncData?.gadget}}</h5>
