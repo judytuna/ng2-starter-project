@@ -37,10 +37,9 @@ describe('Component: Gadgets', () => {
 @Component({
   selector: 'test',
   template: `
-    <app-gadgets></app-gadgets>
+    <gadgets></gadgets>
   `,
   directives: [GadgetsComponent]
 })
 class GadgetsComponentTestController {
 }
-
