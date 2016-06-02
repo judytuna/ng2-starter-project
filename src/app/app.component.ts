@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HomeComponent } from './+home';
-import { Routes, Router, ROUTER_DIRECTIVES} from '@angular/router';
+import { RouteConfig, Router, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 import { AboutComponent } from './+about';
 import { ItemsComponent } from './+items';
 import {MessageService} from './shared';
@@ -13,13 +13,12 @@ import {MessageService} from './shared';
   directives: [ROUTER_DIRECTIVES],
   providers: [MessageService]
 })
-@Routes([
-  {path: '/', component: HomeComponent },
-  {path: '/home', component: HomeComponent},
-  {path: '/about', component: AboutComponent},
-  {path: '/items', component: ItemsComponent},
-  {path: '/*', component: HomeComponent }
+@RouteConfig([
+  {path: '/home', name: 'Home', component: HomeComponent, useAsDefault: true},
+  {path: '/about', name: 'About', component: AboutComponent},
+  {path: '/items', name: 'Items', component: ItemsComponent},
+  {path: '/**', redirectTo: ['Home']}
 ])
-export class Ng2StarterProjectAppComponent {
+export class AppComponent {
   constructor(private router: Router) {}
 }
